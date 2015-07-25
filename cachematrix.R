@@ -1,8 +1,11 @@
 ## Submitted by Syd Frederick
+## ****PLEASE SEE END OF FILE FOR AN EXAMPLE****
+
 ## These functions are made to create a matrix
 ## and cache its own inverse, saving in overall
 ## computation time when using the inverse
 ## repeatedly
+
 
 ## This first function creates a "matrix"
 ## that has the ability to set and get
@@ -41,3 +44,21 @@ cacheSolve <- function(x, ...) {
   x$setInverse(inverse)
   inverse
 }
+
+##EXAMPLE:
+## First create a makeCacheMatrix like this:
+## > makeCacheMatrix(x)
+## This inititializes the matrix list
+## 
+## Next, you want to set the data, this 
+## is the most crucial step to this function:
+## > x$set(matrix(c(1,2,3,4), 2, 2))
+##
+## Of course, you can use any matrix you want, as long
+## as it is square and invertible
+##
+## Now you can correctly call cacheSolve()
+## > cacheSolve(x)
+##
+## NOTE: If you do not set the data, you have not
+## properly created a makeCacheMatrix 
